@@ -1,6 +1,31 @@
 ---
 import Container from "../../layouts/Container.astro";
 ---
-<Container background="url(../../../public/img/bg-1.svg)">
-  <p>Olá, mundo</p>
+<Container background="url(../../../public/img/bg-1.svg)" paddingBlock="var(--fs-6)">
+  <header>
+    <h1 class="title">NomeDoProjeto</h1>
+    <button class="gear"></button>
+  </header>
 </Container>
+
+<style>  
+  header{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .gear{
+    width: 2rem;
+    height: 2rem;
+    border: none;
+
+    background: none;
+    background-image: url(../../../public/img/gear.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+</style>

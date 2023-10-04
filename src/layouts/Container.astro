@@ -1,12 +1,11 @@
 ---
-/**
- * Receives background. Either color or image. Defaults to none
- */
+import { string } from 'astro/zod';
 interface Props {
   background?: string;
+  paddingBlock?: string;
 }
 
-const { background = "none" } = Astro.props;
+const { background = "none", paddingBlock = "0" } = Astro.props;
 ---
 
 <section>
@@ -15,8 +14,10 @@ const { background = "none" } = Astro.props;
   </div>
 </section>
 
-<style define:vars={{background}}>
+<style define:vars={{background, paddingBlock}}>
   section{
+    padding-block: var(--paddingBlock);
+
     background: var(--background);
     background-size: cover;
     background-repeat: no-repeat;
