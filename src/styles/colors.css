@@ -1,0 +1,16 @@
+:root{
+  --light-green-400: #A2F9E4;/*Padrao no topo*/
+  --light-green-200: #CAFFF2;/*Botoes topo*/
+
+  --light-brown: #FFBABA;
+  --dark-brown: #6F1414;
+
+  --light-blue: #BAD2FF;
+  --dark-blue: #14286F;
+
+  --light-pink: #FFBAE8;
+  --dark-pink: #930160;
+
+  --black: #151515;
+  --white: #F2F2F2;
+}
