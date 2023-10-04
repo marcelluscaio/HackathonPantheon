@@ -1,0 +1,28 @@
+---
+/**
+ * Receives background. Either color or image. Defaults to none
+ */
+interface Props {
+  background?: string;
+}
+
+const { background = "none" } = Astro.props;
+---
+
+<section>
+  <div>
+    <slot></slot>
+  </div>
+</section>
+
+<style define:vars={{background}}>
+  section{
+    background: var(--background);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  section > div{
+    width: 90%;
+    margin-inline: auto;
+  }
+</style>
