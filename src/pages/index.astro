@@ -12,10 +12,23 @@ import Welcome from '../components/welcome/Welcome.astro';
 
 <style>
 .background{
+	/* Take height out when more content is within page */
+	height: 100%;
 	padding-block: 2rem;
 	
 	background: url(../../../public/img/bg-1.svg);
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: 0 45%;
+}
+
+/* A partir de 800px */
+@media (min-width: 50em){
+	.background{
+		padding-block: 0;
+		
+		/* background: none; */
+		background-position: 0 35%;
+	}
 }
 </style>

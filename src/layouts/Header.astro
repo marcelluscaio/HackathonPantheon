@@ -1,8 +1,8 @@
 ---
-import Container from "./Container.astro";
+
 ---
-<Container>
-  <header>
+<header>
+  <div>
     <h1 class="title">Passos Médicos</h1>
     <nav>
       <ul>
@@ -21,113 +21,133 @@ import Container from "./Container.astro";
       </ul>
     </nav>
     <button class="gear"></button>
-  </header>
-</Container>
+  </div>
+</header>
 
 <style>
-    header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+header{
+  margin-bottom: 2rem;
+}
 
-    margin-bottom: 2rem;
-  }
+header > div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 
-  h1{
-    color: var(--white);
-    text-shadow: 
-      1px 2px var(--dark-green-200),
-      -1px -1px var(--dark-green-200),
-      1px 1px var(--dark-green-200),
-      -1px 1px var(--dark-green-200),
-      1px -1px var(--dark-green-200);
-  }
+  width: 90%;
+  margin-inline: auto;
+}
 
-  .gear{
-    width: 2rem;
-    height: 2rem;
-    border: none;
+h1{
+  color: var(--white);
+  text-shadow: 
+  1px 2px var(--dark-green-200),
+  -1px -1px var(--dark-green-200),
+  1px 1px var(--dark-green-200),
+  -1px 1px var(--dark-green-200),
+  1px -1px var(--dark-green-200);
+}
 
-    background: none;
-    background-image: url(../../../public/img/gear.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+/*Nav fixa somente em celulares*/
+@media(max-width: 50em){
+  nav{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    padding-block: var(--fs-5);
+
+    background-color: var(--black-300);
   }
 
   ul{
-    display: flex;
-    justify-content: space-between;
-    gap: var(--fs-6) var(--fs-3) ;
-    flex-wrap: wrap; 
+    width: 90%;
+    margin-inline: auto;   
+  }
+}
+
+ul{
+  display: flex;
+  justify-content: space-between;
+  gap: var(--fs-6) var(--fs-3) ;
+  flex-wrap: wrap; 
+}
+
+a{
+  color: var(--black-100);
+}
+
+.gear{
+  width: 2rem;
+  height: 2rem;
+  border: none;
+
+  background: none;
+  background-image: url(../../../public/img/gear.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* A partir de 800px */
+@media (min-width: 50em){
+  header{
+    padding-block: var(--fs-8);
+    border-bottom: 4px solid var(--dark-green-200);
+
+    background-color: var(--light-green-200);
+  }
+
+  header > div{
+    width: 88%;
+  }
+  
+  h1{
+    text-shadow: 
+    3px 4px var(--dark-green-200),
+    -2px -2px var(--dark-green-200),
+    2px 2px var(--dark-green-200),
+    -2px 2px var(--dark-green-200),
+    2px -2px var(--dark-green-200);
+  }
+  
+  ul{
+    gap:var(--fs-1);
+
+    isolation: isolate;
   }
 
   a{
-    color: var(--black-100);
+    position: relative;
+
+    padding: .75rem;
+    border: 2px solid currentColor;
+
+    background-color: var(--light-green-200);
+
+    color: var(--dark-green-200);
+    text-align: center;
   }
 
-  /* A partir de 800px */
-  @media (min-width: 50em){
-    h1{
-      text-shadow: 
-      3px 4px var(--dark-green-200),
-      -2px -2px var(--dark-green-200),
-      2px 2px var(--dark-green-200),
-      -2px 2px var(--dark-green-200),
-      2px -2px var(--dark-green-200);
-    }
-    
-    ul{
-      gap:var(--fs-1);
+  a::after{
+    content: '';
 
-      isolation: isolate;
-    }
+    position: absolute;
+    inset: 0;
+    bottom: -5px;
+    right: -5px;
+    z-index: -1;
 
-    a{
-      position: relative;
-  
-      padding: .75rem;
-      border: 2px solid currentColor;
-
-      background-color: var(--light-green-200);
-
-      color: var(--dark-green-200);
-      text-align: center;
-    }
-
-    a::after{
-      content: '';
-
-      position: absolute;
-      inset: 0;
-      bottom: -5px;
-      right: -5px;
-      z-index: -1;
-
-      background-color: var(--dark-green-200);
-    }
+    background-color: var(--dark-green-200);
   }
 
-  
-  /*Nav fixa somente em celulares*/
-  @media(max-width: 50em){
-    nav{
-      position: fixed;
-      bottom: 0;
-      left: 0;
-  
-      width: 100%;
-      padding-block: var(--fs-5);
-  
-      background-color: var(--black-300);
-    }
-
-    ul{
-      width: 90%;
-      margin-inline: auto;   
-    }
+  .gear{
+    width: var(--fs-6);
+    height: var(--fs-6);
   }
+}
 
 </style>
