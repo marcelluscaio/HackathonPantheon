@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Welcome from '../components/welcome/Welcome.astro';
+
+
+import NoDoctorStep from '../components/multistep-form/nodoctor/NoDoctorStep.astro';
+---
+
+<Layout title="Pantheon">
+	<div class="background1">
+
+		<Welcome></Welcome>
+	</div>
+	<div>		
+        <NoDoctorStep> </NoDoctorStep>
+	</div>
+<!-- 	<Container background="url(../../../public/img/bg-1.svg)" paddingBlock="var(--fs-6)">
+	</Container> -->
+</Layout>
+
+<style>
+.background1{
+	background: url(../../../public/img/bg-1.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+</style>
