@@ -72,6 +72,13 @@ button::before{
 
   /* A partir de 800px */
   @media (min-width: 50em){
+    article{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+    }
+
     article:nth-of-type(1){
       grid-column: 1/2;
     }
@@ -80,15 +87,30 @@ button::before{
       grid-column: 2/3;
     }
 
+    article > img{
+      margin-bottom: 0;
+      margin-inline: 0;
+    }
+
     button{
       grid-row: 1/2;
       grid-column: span 1 / -1;
+    }
+
+    article, 
+    button{
+      padding: .75em;
     }
     
     article::after,
     button::after{
       bottom: -5px;
       right: -5px;
+    }
+
+    button::before{
+      width: 1em;
+      height: 1em;
     }
   }
 
