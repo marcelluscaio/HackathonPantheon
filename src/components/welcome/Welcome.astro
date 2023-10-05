@@ -1,11 +1,15 @@
 ---
 import Container from "../../layouts/Container.astro";
 ---
-<Container background="url(../../../public/img/bg-1.svg)" paddingBlock="var(--fs-6)">
+<Container paddingBlock="var(--fs-6)">
   <header>
     <h1 class="title">NomeDoProjeto</h1>
     <button class="gear"></button>
   </header>
+  <div class="userSection">
+    <img src="../../../public/img/userImgMock.jpg" alt="Imagem do usuário" >
+    <h2 class="title">Seja bem vindo, <span>Fulano :)</span></h2>
+  </div>
 </Container>
 
 <style>  
@@ -14,6 +18,7 @@ import Container from "../../layouts/Container.astro";
     justify-content: space-between;
     gap: 1rem;
     flex-wrap: wrap;
+    margin-bottom: 2.25rem;
   }
 
   .gear{
@@ -26,6 +31,23 @@ import Container from "../../layouts/Container.astro";
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+  }
+  span{
+    display: block;
+
+    font-weight: var(--fw-2)
+  }
+
+  .userSection{
+    display: flex;
+    gap: var(--fs-1);
+    flex-wrap: wrap;
+  }
+
+  .userSection > img{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 1.75rem;
   }
 
 </style>
