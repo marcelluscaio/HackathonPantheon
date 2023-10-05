@@ -1,0 +1,68 @@
+<div class="scheduleAppointment">
+  <article>
+    <img src="../../../public/img/icon-help.svg" alt="">
+    <p class="regular-text"><span class="regular-text--bold">99</span> algo mais</p>
+  </article>
+  <article>
+    <img src="../../../public/img/icon-help.svg" alt="">
+    <p class="regular-text"><span class="regular-text--bold">99</span> algo mais</p>
+  </article>
+  <button class="regular-text regular-text--3 regular-text--bold">Agendar consulta</button>
+</div>
+
+<style>
+
+.scheduleAppointment{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--fs-2) .5rem;
+}
+
+.scheduleAppointment > :where(article, button){
+  padding: .75rem;
+  border: 2px solid currentColor;
+  border-bottom: 4px solid currentColor;
+  border-right: 4px solid currentColor;
+
+  background-color: var(--light-green-200);
+
+  color: var(--dark-green-200);
+  text-align: center;
+}
+
+.scheduleAppointment > article > img{
+  width: var(--fs-5);
+  height: var(--fs-5);
+  margin-inline: auto;
+  margin-bottom: .5rem;
+}
+
+
+button{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  gap: .5rem;
+
+  border: none;
+  
+  background: none;
+  
+  grid-column: span 2;
+}
+
+button::before{
+  content: '';
+
+  display: inline-block;
+
+  width: var(--fs-5);
+  height: var(--fs-5);
+  
+  background-image: url(../../../public/img/icon-calendar.svg);
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  background-position:center;
+}
+
+</style>
