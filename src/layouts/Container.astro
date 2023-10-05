@@ -21,8 +21,15 @@ const { background = "none", paddingBlock = "0" } = Astro.props;
     background-size: cover;
     background-repeat: no-repeat;
   }
+
   section > div{
     width: 90%;
     margin-inline: auto;
+  }
+
+  @media (min-width: 50em){
+    section > div{
+      width: 88%;
+    }
   }
 </style>

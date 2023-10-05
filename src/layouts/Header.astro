@@ -4,7 +4,6 @@ import Container from "./Container.astro";
 <Container>
   <header>
     <h1 class="title">Passos Médicos</h1>
-    <button class="gear"></button>
     <nav>
       <ul>
         <li>
@@ -21,6 +20,7 @@ import Container from "./Container.astro";
         </li>
       </ul>
     </nav>
+    <button class="gear"></button>
   </header>
 </Container>
 
@@ -28,6 +28,7 @@ import Container from "./Container.astro";
     header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
 
@@ -56,31 +57,63 @@ import Container from "./Container.astro";
     background-size: 100% 100%;
   }
 
-  nav{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-
-    width: 100%;
-    padding-block: var(--fs-5);
-
-    background-color: var(--black-300);
-  }
-
   ul{
     display: flex;
     justify-content: space-between;
     gap: var(--fs-6) var(--fs-3) ;
-    flex-wrap: wrap;
-
-    width: 90%;
-    margin-inline: auto;
-    
+    flex-wrap: wrap; 
   }
 
   a{
     color: var(--black-100);
   }
 
+  /* A partir de 800px */
+  @media (min-width: 50em){
+    h1{
+      text-shadow: 
+      3px 4px var(--dark-green-200),
+      -2px -2px var(--dark-green-200),
+      2px 2px var(--dark-green-200),
+      -2px 2px var(--dark-green-200),
+      2px -2px var(--dark-green-200);
+    }
+    
+    ul{
+      gap:var(--fs-1);
+    }
+
+    a{
+      position: relative;
+  
+      padding: .75rem;
+      border: 2px solid currentColor;
+
+      background-color: var(--light-green-200);
+
+      color: var(--dark-green-200);
+      text-align: center;
+    }
+  }
+
+  
+  /*Nav fixa somente em celulares*/
+  @media(max-width: 50em){
+    nav{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+  
+      width: 100%;
+      padding-block: var(--fs-5);
+  
+      background-color: var(--black-300);
+    }
+
+    ul{
+      width: 90%;
+      margin-inline: auto;   
+    }
+  }
 
 </style>
