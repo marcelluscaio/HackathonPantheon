@@ -81,6 +81,8 @@ import Container from "./Container.astro";
     
     ul{
       gap:var(--fs-1);
+
+      isolation: isolate;
     }
 
     a{
@@ -93,6 +95,18 @@ import Container from "./Container.astro";
 
       color: var(--dark-green-200);
       text-align: center;
+    }
+
+    a::after{
+      content: '';
+
+      position: absolute;
+      inset: 0;
+      bottom: -5px;
+      right: -5px;
+      z-index: -1;
+
+      background-color: var(--dark-green-200);
     }
   }
 
