@@ -1,6 +1,6 @@
-:root{
-  --fs-1: .75rem; /*12*/
-  --fs-2: .875rem; /*14*/
+:root {
+  --fs-1: 0.75rem; /*12*/
+  --fs-2: 0.875rem; /*14*/
   --fs-3: 1rem; /*16*/
   --fs-4: 1.25rem; /*20*/
   --fs-5: 1.5rem;/*24*/
@@ -15,59 +15,57 @@
 /* azeret-mono-400 - latin */
 @font-face {
   font-display: swap;
-  font-family: 'Azeret Mono';
+  font-family: "Azeret Mono";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/azeret-mono-v17-latin-regular.woff2') format('woff2');
+  src: url("../fonts/azeret-mono-v17-latin-regular.woff2") format("woff2");
 }
 
 /* azeret-mono-700 - latin */
 @font-face {
-  font-display: swap; 
-  font-family: 'Azeret Mono';
+  font-display: swap;
+  font-family: "Azeret Mono";
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/azeret-mono-v17-latin-700.woff2') format('woff2');
+  src: url("../fonts/azeret-mono-v17-latin-700.woff2") format("woff2");
 }
 
-
-body{
-  font-family: 'Azeret Mono', monospace;
+body {
+  font-family: "Azeret Mono", monospace;
 }
 
-.title{
+.title {
   font-size: var(--fs-6);
   font-weight: var(--fw-1);
-  line-height: 1.2
+  line-height: 1.2;
 }
 
-.title--small{
+.title--small {
   font-size: var(--fs--5);
   font-weight: var(--fw-2);
 }
 
-.regular-text{
+.regular-text {
   font-size: var(--fs-2);
   font-weight: var(--fw-1);
   line-height: 1.2;
 }
 
-.regular-text--bold{
+.regular-text--bold {
   font-weight: var(--fw-2);
 }
 
-.regular-text--1{
+.regular-text--1 {
   font-size: var(--fs-1);
 }
 
-.regular-text--3{
+.regular-text--3 {
   font-size: var(--fs-3);
 }
 
-.regular-text--4{
+.regular-text--4 {
   font-size: var(--fs-4);
 }
-
 
 @media (min-width: 50em){
   :root{

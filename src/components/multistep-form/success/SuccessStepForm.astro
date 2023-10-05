@@ -1,0 +1,97 @@
+<main>
+    <div class="content-container">
+      <div class="container-main">
+        <img src="../../../public/img/success.svg" />
+        <span>Agendamento realizado!</span>
+      </div>
+  
+  <div class="container-buttons">    
+      <button>
+        <img src="../../../public/img/arrow-right.svg" />
+        Ver agendamento
+      </button>
+  
+      <button>
+        <img src="../../../public/img/arrow-right.svg" />
+          Ir para o início
+      </button>
+  
+      </div>
+    </div>
+  </main>
+  
+  <style>
+    main {
+      width: 100%;
+      height: 100%;
+      margin-top: 4.875rem;
+    }
+  
+    .content-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction:column;    
+      gap: 2rem;
+      margin: 0 auto;
+      padding: 3rem;
+      width: 90%;
+      height: 90%;
+      border: 5px solid var(--black-600);
+      border-bottom: 8px solid var(--black-600);
+      border-right: 8px solid var(--black-600);
+    }
+  
+    button {
+    display:flex;
+    gap:16px;
+    align-items: center;
+      cursor: pointer;
+      border: none;
+      background: none;
+      margin-bottom: 16px;
+      font-size: var(--fs-4);
+      padding: 0.5rem 1rem;
+      border: 2px solid var(--black-600);
+      border-bottom: 4px solid var(--black-600);
+      border-right: 4px solid var(--black-600);
+      width:fit-content;
+    }
+  
+  
+  
+    .container-main {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 3rem;
+      align-items: center;
+    }
+  
+    .container-main > img {
+      width: 759px;
+      height: auto;
+    }
+  
+    .container-main > span {
+      font-size: var(--fs-8);
+      font-weight: var(--fw-2);
+      text-align: center;
+      margin-top: 32px;
+    }
+  
+    .container-buttons{
+      display: flex;
+      justify-content: center;    
+      flex-direction: column;
+      align-items: center;    
+    }
+  
+    @media (min-width: 768px) {
+
+  
+      .container-main > img {
+        display: flex;
+      }
+    }
+  </style>

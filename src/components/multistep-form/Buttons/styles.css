@@ -1,0 +1,35 @@
+.btn-multistep {
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  max-width: 320px;
+  gap: 1rem;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.btn-multistep:hover {
+  opacity: 0.8;
+}
+
+.btn-multistep.pink {
+  background-color: var(--light-pink);
+  border: 2px solid var(--dark-pink);
+  border-right: 4px solid var(--dark-pink);
+  border-bottom: 4px solid var(--dark-pink);
+}
+
+.btn-multistep.blue {
+  background-color: var(--light-blue);
+  border: 2px solid var(--dark-blue);
+  border-right: 4px solid var(--dark-blue);
+  border-bottom: 4px solid var(--dark-blue);
+}
+
+.btn-multistep.neutral {
+  padding: 8px 16px;
+  background-color: var(--white);
+  border: 2px solid var(--black-600);
+  border-right: 4px solid var(--black-600);
+  border-bottom: 4px solid var(--black-600);
+}
