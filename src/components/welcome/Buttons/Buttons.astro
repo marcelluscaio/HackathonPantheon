@@ -20,8 +20,13 @@
 
 .scheduleAppointment > :where(article, button){
   padding: .75rem;
+  border: 2px solid currentColor;
+  border-bottom: 4px solid currentColor;
+  border-right: 4px solid currentColor;
 
   background-color: var(--light-green-200);
+
+  color: var(--dark-green-200);
   text-align: center;
 }
 
@@ -29,11 +34,9 @@
   width: var(--fs-5);
   height: var(--fs-5);
   margin-inline: auto;
+  margin-bottom: .5rem;
 }
 
-.scheduleAppointment .regular-text{
-  color: var(--dark-green-200);
-}
 
 button{
   display: flex;
@@ -60,9 +63,6 @@ button::before{
   background-repeat:no-repeat;
   background-size: 100% 100%;
   background-position:center;
-
-
-
 }
 
 </style>
