@@ -4,7 +4,7 @@ import "./styles.css";
 interface ButtonProps {
   icon: ReactElement;
   title: string;
-  color: "neutral" | "blue" | "pink";
+  color?: "neutral" | "blue" | "pink";
 }
 
 export function MultistepButtons({
