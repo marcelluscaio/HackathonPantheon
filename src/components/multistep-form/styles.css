@@ -1,0 +1,108 @@
+main {
+  width: 100%;
+  //height: 100%;
+  padding-top: 4.875rem;
+  padding-bottom: 4.875rem;
+}
+
+.content-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 3rem;
+  width: 90%;
+  height: 90%;
+  border: 5px solid var(--black-600);
+  border-bottom: 8px solid var(--black-600);
+  border-right: 8px solid var(--black-600);
+}
+
+.container-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.container-head > h3 {
+  display: inline-flex;
+  width: 220px;
+  font-size: var(--fs-5);
+  font-weight: var(--fw-2);
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--black-600);
+  text-align: center;
+}
+
+.container-head > span {
+  font-size: var(--fs-4);
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--black-600);
+  border-bottom: 4px solid var(--black-600);
+  border-right: 4px solid var(--black-600);
+}
+
+.content-container > .container-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 3rem;
+}
+
+.content-container > .container-main > img {
+  display: none;
+}
+
+.content-container > .container-main > span {
+  max-width: 768px;
+  font-size: var(--fs-8);
+  font-weight: var(--fw-2);
+  text-align: center;
+}
+
+.content-container > .container-main > .btn-sections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container-head {
+    flex-direction: row;
+    margin: 0;
+  }
+
+  .container-head > h3 {
+    padding: 0;
+    padding-right: 15px;
+    border: none;
+    border-right: 2px solid var(--black-600);
+    text-align: left;
+  }
+
+  .content-container > .container-main > img {
+    display: flex;
+  }
+
+  .content-container > .container-main > span {
+    text-align: left;
+  }
+
+  .content-container > .container-main > .btn-sections {
+    align-items: start;
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content-container {
+    background-image: url("../../../public/img/bg-illustration.svg");
+    background-repeat: no-repeat;
+    background-position: right 70px;
+    background-size: 450px;
+  }
+}

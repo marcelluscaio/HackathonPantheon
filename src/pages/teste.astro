@@ -1,8 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Welcome from '../components/welcome/Welcome.astro';
-import Container from '../layouts/Container.astro';
-import { MultistepForm } from '../components/multistep-form/index.jsx';
+
+
+import NoDoctorStep from '../components/multistep-form/nodoctor/NoDoctorStep.astro';
 ---
 
 <Layout title="Pantheon">
@@ -10,8 +11,8 @@ import { MultistepForm } from '../components/multistep-form/index.jsx';
 
 		<Welcome></Welcome>
 	</div>
-	<div>
-		<MultistepForm client:load />
+	<div>		
+        <NoDoctorStep> </NoDoctorStep>
 	</div>
 <!-- 	<Container background="url(../../../public/img/bg-1.svg)" paddingBlock="var(--fs-6)">
 	</Container> -->
