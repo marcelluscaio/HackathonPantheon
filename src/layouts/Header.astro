@@ -7,10 +7,18 @@ import Container from "./Container.astro";
     <button class="gear"></button>
     <nav>
       <ul>
-        <li>Home</li>
-        <li>Consultas</li>
-        <li>Conversas</li>
-        <li>Medicamentos</li>
+        <li>
+          <a class="regular-text regular-text--1" href="">Home</a>
+        </li>
+        <li>
+          <a href="" class="regular-text regular-text--1">Consultas</a>
+        </li>
+        <li>
+          <a href="" class="regular-text regular-text--1">Conversas</a>
+        </li>
+        <li>
+          <a href="" class="regular-text regular-text--1">Medicamentos</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -51,5 +59,28 @@ import Container from "./Container.astro";
   nav{
     position: fixed;
     bottom: 0;
+    left: 0;
+
+    width: 100%;
+    padding-block: var(--fs-5);
+
+    background-color: var(--black-300);
   }
+
+  ul{
+    display: flex;
+    justify-content: space-between;
+    gap: var(--fs-6) var(--fs-3) ;
+    flex-wrap: wrap;
+
+    width: 90%;
+    margin-inline: auto;
+    
+  }
+
+  a{
+    color: var(--black-100);
+  }
+
+
 </style>
