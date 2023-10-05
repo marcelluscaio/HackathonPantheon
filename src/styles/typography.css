@@ -3,10 +3,10 @@
   --fs-2: 0.875rem; /*14*/
   --fs-3: 1rem; /*16*/
   --fs-4: 1.25rem; /*20*/
-  --fs-5: 1.5rem; /*24*/
-  --fs-6: 1.75rem; /*28*/
-  --fs-7: 2rem; /*32*/
-  --fs-8: 2.25rem; /*36*/
+  --fs-5: 1.5rem;/*24*/
+  --fs-6: 1.75rem;/*28*/
+  --fs-7: 2rem;/*32*/
+  --fs-8: 3rem; /*48*/
 
   --fw-1: 400;
   --fw-2: 700;
@@ -65,4 +65,22 @@ body {
 
 .regular-text--4 {
   font-size: var(--fs-4);
+}
+
+@media (min-width: 50em){
+  :root{
+    --fs-1: var(--fs-4);
+    --fs-2: var(--fs-4);
+    --fs-3: var(--fs-6);
+    --fs-6: var(--fs-7)
+  }
+}
+
+@media (min-width: 87em){
+  :root{
+    --fs-1: var(--fs-5);
+    --fs-2: var(--fs-5);
+    --fs-3: var(--fs-7);
+    --fs-6: var(--fs-8)
+  }
 }

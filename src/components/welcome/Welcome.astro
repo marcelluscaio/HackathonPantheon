@@ -2,51 +2,40 @@
 import Container from "../../layouts/Container.astro";
 import Buttons from "../welcome/Buttons/Buttons.astro"
 ---
-<Container paddingBlock="var(--fs-6)">
-  <header>
-    <h1 class="title">NomeDoProjeto</h1>
-    <button class="gear"></button>
-  </header>
-  <div class="userSection">
-    <img src="../../../public/img/userImgMock.jpg" alt="Imagem do usuário" >
-    <h2 class="title">Seja bem vindo, <span>Fulano :)</span></h2>
+<Container paddingBlock="0 2rem">  
+  <div class="grid">
+    <div class="userSection">
+      <img src="../../../public/img/userImgMock.jpg" alt="Imagem do usuário" >
+      <h2 class="title">Seja bem vindo, <span>Fulano :)</span></h2>
+    </div>
+    <Buttons></Buttons>
   </div>
-  <Buttons></Buttons>
 </Container>
 
 <style>  
-  header{
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .5rem;
+    align-items: center;
+    
+    isolation: isolate;
+  }  
+  
+  .userSection{
+    grid-column: span 2;
+    
     display: flex;
-    justify-content: space-between;
-    gap: 1rem;
+    gap: var(--fs-1);
     flex-wrap: wrap;
-    margin-bottom: 2.25rem;
+    
+    margin-bottom: var(--fs-4)
   }
-
-  .gear{
-    width: 2rem;
-    height: 2rem;
-    border: none;
-
-    background: none;
-    background-image: url(../../../public/img/gear.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-  }
-
+  
   h2 > span{
     display: block;
 
     font-weight: var(--fw-2)
-  }
-
-  .userSection{
-    display: flex;
-    gap: var(--fs-1);
-    flex-wrap: wrap;
-
-    margin-bottom: var(--fs-4)
   }
 
   .userSection > img{
@@ -56,6 +45,13 @@ import Buttons from "../welcome/Buttons/Buttons.astro"
     border-bottom: 3px solid var(--black-600);
     border-right: 3px solid var(--black-600);
     border-radius: 1.75rem;
+  }
+
+  @media (min-width: 50em){
+    .grid{
+      grid-template-columns: auto auto 1fr auto;
+      gap: 1rem;
+    }
   }
 
 
