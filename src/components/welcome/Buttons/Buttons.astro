@@ -16,18 +16,35 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--fs-2) .5rem;
+
+  isolation: isolate;
 }
 
 .scheduleAppointment > :where(article, button){
+  position: relative;
+  
   padding: .75rem;
   border: 2px solid currentColor;
-  border-bottom: 4px solid currentColor;
-  border-right: 4px solid currentColor;
+  /* border-bottom: 4px solid currentColor;
+  border-right: 4px solid currentColor; */
 
   background-color: var(--light-green-200);
 
   color: var(--dark-green-200);
   text-align: center;
+}
+
+.scheduleAppointment > article::after,
+.scheduleAppointment > button::after{
+  content: '';
+
+  position: absolute;
+  inset: 0;
+  bottom: -3px;
+  right: -3px;
+  z-index: -1;
+
+  background-color: var(--dark-green-200);
 }
 
 .scheduleAppointment > article > img{
