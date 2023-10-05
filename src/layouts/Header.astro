@@ -1,0 +1,49 @@
+---
+import Container from "./Container.astro";
+---
+<Container>
+  <header>
+    <h1 class="title">Passos Médicos</h1>
+    <button class="gear"></button>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Consultas</li>
+        <li>Conversas</li>
+        <li>Medicamentos</li>
+      </ul>
+    </nav>
+  </header>
+</Container>
+
+<style>
+    header{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.25rem;
+  }
+
+  h1{
+    color: var(--white);
+    text-shadow: 
+      1px 2px var(--dark-green-200),
+      -1px -1px var(--dark-green-200),
+      1px 1px var(--dark-green-200),
+      -1px 1px var(--dark-green-200),
+      1px -1px var(--dark-green-200);
+  }
+
+  .gear{
+    width: 2rem;
+    height: 2rem;
+    border: none;
+
+    background: none;
+    background-image: url(../../../public/img/gear.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+</style>

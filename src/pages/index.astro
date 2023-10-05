@@ -1,20 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../layouts/Header.astro';
 import Welcome from '../components/welcome/Welcome.astro';
-import Container from '../layouts/Container.astro';
 ---
-
 <Layout title="Pantheon">
-	<div class="background1">
-
+	<div class="background">
+		<Header></Header>
 		<Welcome></Welcome>
 	</div>
-<!-- 	<Container background="url(../../../public/img/bg-1.svg)" paddingBlock="var(--fs-6)">
-	</Container> -->
 </Layout>
 
 <style>
-.background1{
+.background{
+	padding-block: 2rem;
+	
 	background: url(../../../public/img/bg-1.svg);
 	background-size: cover;
 	background-repeat: no-repeat;
