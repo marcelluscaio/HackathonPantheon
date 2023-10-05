@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Welcome from '../components/welcome/Welcome.astro';
 import Container from '../layouts/Container.astro';
-import MultistepForm from '../components/multistep-form/MultistepForm.astro';
+import { MultistepForm } from '../components/multistep-form/index.jsx';
 ---
 
 <Layout title="Pantheon">
@@ -11,7 +11,7 @@ import MultistepForm from '../components/multistep-form/MultistepForm.astro';
 		<Welcome></Welcome>
 	</div>
 	<div>
-		<MultistepForm />
+		<MultistepForm client:load />
 	</div>
 <!-- 	<Container background="url(../../../public/img/bg-1.svg)" paddingBlock="var(--fs-6)">
 	</Container> -->
