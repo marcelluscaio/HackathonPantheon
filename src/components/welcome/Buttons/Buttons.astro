@@ -1,0 +1,44 @@
+<div class="scheduleAppointment">
+  <article>
+    <img src="../../../public/img/icon-help.svg" alt="">
+    <p class="regular-text"><span class="regular-text--bold">99</span> algo mais</p>
+  </article>
+  <article>
+    <img src="../../../public/img/icon-help.svg" alt="">
+    <p class="regular-text"><span class="regular-text--bold">99</span> algo mais</p>
+  </article>
+  <button class="regular-text regular-text--3 regular-text--bold">Agendar consulta</button>
+</div>
+
+<style>
+
+.scheduleAppointment{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--fs-2) .5rem;
+}
+
+.scheduleAppointment > :where(article, button){
+  padding: .75rem;
+
+  background-color: var(--light-green-200);
+  text-align: center;
+}
+
+.scheduleAppointment > article > img{
+  margin-inline: auto;
+}
+
+.scheduleAppointment .regular-text{
+  color: var(--dark-green-200);
+}
+
+button{
+  border: none;
+  
+  background: none;
+  
+  grid-column: span 2;
+}
+
+</style>

@@ -1,5 +1,6 @@
 ---
 import Container from "../../layouts/Container.astro";
+import Buttons from "../welcome/Buttons/Buttons.astro"
 ---
 <Container paddingBlock="var(--fs-6)">
   <header>
@@ -10,6 +11,7 @@ import Container from "../../layouts/Container.astro";
     <img src="../../../public/img/userImgMock.jpg" alt="Imagem do usuário" >
     <h2 class="title">Seja bem vindo, <span>Fulano :)</span></h2>
   </div>
+  <Buttons></Buttons>
 </Container>
 
 <style>  
@@ -32,7 +34,8 @@ import Container from "../../layouts/Container.astro";
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
-  span{
+
+  h2 > span{
     display: block;
 
     font-weight: var(--fw-2)
@@ -42,6 +45,8 @@ import Container from "../../layouts/Container.astro";
     display: flex;
     gap: var(--fs-1);
     flex-wrap: wrap;
+
+    margin-bottom: var(--fs-4)
   }
 
   .userSection > img{
@@ -49,5 +54,6 @@ import Container from "../../layouts/Container.astro";
     height: 3.5rem;
     border-radius: 1.75rem;
   }
+
 
 </style>
