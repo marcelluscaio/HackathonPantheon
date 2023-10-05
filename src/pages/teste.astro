@@ -1,21 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../layouts/Header.astro';
 import Welcome from '../components/welcome/Welcome.astro';
-
-
-import NoDoctorStep from '../components/multistep-form/nodoctor/NoDoctorStep.astro';
+import { MultistepForm } from '../components/multistep-form/index.jsx';
+import Select from '../components/multistep-form/Select/Select.astro'
 ---
-
 <Layout title="Pantheon">
-	<div class="background1">
-
+	<div class="background">
+		<Header></Header>
 		<Welcome></Welcome>
 	</div>
-	<div>		
-        <NoDoctorStep> </NoDoctorStep>
-	</div>
-<!-- 	<Container background="url(../../../public/img/bg-1.svg)" paddingBlock="var(--fs-6)">
-	</Container> -->
+	<MultistepForm client:load />
+	<Select content={["Caio", "Teste", "Caio", "Teste", "Caio", "Teste", "Caio", "Teste"]}></Select>
+	<Select content={["Banana", "Cenoura", "Aipim"]}></Select>
+	<Select></Select>
 </Layout>
 
 <style>
