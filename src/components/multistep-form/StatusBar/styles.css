@@ -26,6 +26,7 @@
 @media (min-width: 768px) {
   .container-head {
     flex-direction: row;
+    flex-wrap: wrap;
     margin: 0;
   }
 
