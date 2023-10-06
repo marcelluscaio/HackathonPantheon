@@ -3,32 +3,23 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../layouts/Header.astro';
 import Welcome from '../components/welcome/Welcome.astro';
 import { MultistepForm } from '../components/multistep-form/index.jsx';
-
+import Select from '../components/multistep-form/Select/Select.astro'
 ---
 <Layout title="Pantheon">
 	<div class="background">
 		<Header></Header>
 		<Welcome></Welcome>
-		<MultistepForm client:load />
 	</div>
+	<MultistepForm client:load />
+	<Select content={["Caio", "Teste", "Caio", "Teste", "Caio", "Teste", "Caio", "Teste"]}></Select>
+	<Select content={["Banana", "Cenoura", "Aipim"]}></Select>
+	<Select></Select>
 </Layout>
 
 <style>
-.background{
-	padding-block: 2rem;
-	
+.background1{
 	background: url(../../../public/img/bg-1.svg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: 0 45%;
-}
-
-/* A partir de 800px */
-@media (min-width: 50em){
-	.background{
-		padding-block: 0;
-
-		background-position: 0 35%;
-	}
 }
 </style>

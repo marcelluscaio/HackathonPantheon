@@ -1,0 +1,11 @@
+.container-main.summary > .summary-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 24px;
+}
+
+.container-main.summary > .summary-container > span {
+  font-size: var(--fs-3);
+  font-weight: var(--fw-2);
+}
