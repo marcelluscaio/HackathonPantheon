@@ -32,7 +32,6 @@ export function ModalityStep() {
             icon={<ArrowLeft size={26} />}
             title='Voltar para o início'
           />
-          S SelectComponentProps
         </div>
       </div>
     </>
