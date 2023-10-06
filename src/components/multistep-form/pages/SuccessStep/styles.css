@@ -1,0 +1,22 @@
+.success-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-container > img {
+  max-height: 400px;
+}
+
+.success-container > span {
+  font-size: var(--fs-11);
+  font-weight: var(--fw-2);
+}
+
+.success-container > .btn-sections {
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
+}

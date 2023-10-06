@@ -1,0 +1,23 @@
+.failure-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.failure-container > img {
+  max-height: 400px;
+}
+
+.failure-container > span {
+  margin-top: 1rem;
+  font-size: var(--fs-10);
+  font-weight: var(--fw-2);
+}
+
+.failure-container > .btn-sections {
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
+}

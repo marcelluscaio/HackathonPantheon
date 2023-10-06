@@ -1,19 +1,20 @@
 import { ArrowLeft, Laptop, Users } from "@phosphor-icons/react";
 import { MultistepButtons } from "../../Buttons";
+import { StatusBar } from "../../StatusBar";
+import { TitleComponent } from "../../TitleComponent";
 import "./styles.css";
 
 export function ModalityStep() {
+  const titleProps = {
+    link: "public/img/heart-pulse.svg",
+    title: "Para começar seu agendamento, selecione a modalidade desejada.",
+  };
+
   return (
     <>
-      <div className='container-head'>
-        <h3>Agendamento de Consultas</h3>
-        <span>Modalidade</span>
-      </div>
+      <StatusBar />
       <div className='container-main'>
-        <img src='../../../public/img/heart-pulse.svg' width='80px' />
-        <span>
-          Para começar seu agendamento, selecione a modalidade desejada.
-        </span>
+        <TitleComponent link={titleProps.link} title={titleProps.title} />
         <div className='btn-sections'>
           <MultistepButtons
             icon={<Laptop size={26} />}

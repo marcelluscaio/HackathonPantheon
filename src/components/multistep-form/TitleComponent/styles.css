@@ -1,0 +1,22 @@
+.title-container > img {
+  display: none;
+}
+
+.title-container > span {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  font-size: var(--fs-8);
+  font-weight: var(--fw-2);
+}
+
+@media (min-width: 768px) {
+  .title-container > img {
+    display: flex;
+  }
+
+  .title-container > span {
+    max-width: 768px;
+    text-align: left;
+  }
+}
