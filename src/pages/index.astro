@@ -1,26 +1,36 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../layouts/Header.astro';
 import Welcome from '../components/welcome/Welcome.astro';
-import Container from '../layouts/Container.astro';
 import { MultistepForm } from '../components/multistep-form/index.jsx';
+
 ---
-
 <Layout title="Pantheon">
-	<div class="background1">
-
+	<div class="background">
+		<Header></Header>
 		<Welcome></Welcome>
 	</div>
-	<div>
-		<MultistepForm client:load />
-	</div>
-<!-- 	<Container background="url(../../../public/img/bg-1.svg)" paddingBlock="var(--fs-6)">
-	</Container> -->
+	<MultistepForm client:load />
 </Layout>
 
 <style>
-.background1{
+.background{
+	/* Take height out when more content is within page */
+	height: 100%;
+	padding-block: 2rem;
+	
 	background: url(../../../public/img/bg-1.svg);
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: 0 45%;
+}
+
+/* A partir de 800px */
+@media (min-width: 50em){
+	.background{
+		padding-block: 0;
+		
+		background-position: 0 35%;
+	}
 }
 </style>
