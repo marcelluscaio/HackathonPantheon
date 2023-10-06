@@ -3,6 +3,7 @@ import { MultistepButtons } from "../../Buttons";
 import { StatusBar } from "../../StatusBar";
 import { TitleComponent } from "../../TitleComponent";
 import "./styles.css";
+import { SelectComponent } from "../../Select";
 
 export function ModalityStep() {
   const titleProps = {
@@ -15,6 +16,7 @@ export function ModalityStep() {
       <StatusBar />
       <div className='container-main'>
         <TitleComponent link={titleProps.link} title={titleProps.title} />
+
         <div className='btn-sections'>
           <MultistepButtons
             icon={<Laptop size={26} />}
@@ -30,6 +32,7 @@ export function ModalityStep() {
             icon={<ArrowLeft size={26} />}
             title='Voltar para o início'
           />
+          S SelectComponentProps
         </div>
       </div>
     </>
