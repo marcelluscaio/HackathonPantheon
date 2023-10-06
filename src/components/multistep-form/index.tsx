@@ -29,53 +29,25 @@ export function MultistepForm() {
 
   return (
     <main>
-      <div
-        className={`content-container ${pageProps.modalityStep} ${verifyStep(
-          1
-        )}`}
-      >
+      <div className={`content-container ${pageProps.modalityStep}`}>
         <ModalityStep />
       </div>
-      <div
-        className={`content-container ${
-          pageProps.serviceUnitiSetp
-        } ${verifyStep(2)}`}
-      >
+      <div className={`content-container ${pageProps.serviceUnitiSetp}`}>
         <ServiceUnitStep />
       </div>
-      <div
-        className={`content-container ${
-          pageProps.professionalSelectStep
-        } ${verifyStep(3)}`}
-      >
+      <div className={`content-container ${pageProps.professionalSelectStep}`}>
         <ProfessionalSelectStep />
       </div>
-      <div
-        className={`content-container ${
-          pageProps.dateTimeSelectStep
-        } ${verifyStep(4)}`}
-      >
+      <div className={`content-container ${pageProps.dateTimeSelectStep}`}>
         <DateTimeStep />
       </div>
-      <div
-        className={`content-container ${pageProps.summaryStep} ${verifyStep(
-          5
-        )}`}
-      >
+      <div className={`content-container ${pageProps.summaryStep}`}>
         <SummaryStep />
       </div>
-      <div
-        className={`content-container ${pageProps.successStep} ${verifyStep(
-          6
-        )}`}
-      >
+      <div className={`content-container ${pageProps.successStep}`}>
         <SuccessStep />
       </div>
-      <div
-        className={`content-container ${pageProps.failureStep} ${verifyStep(
-          7
-        )}`}
-      >
+      <div className={`content-container ${pageProps.failureStep}`}>
         <FailureStep />
       </div>
     </main>
