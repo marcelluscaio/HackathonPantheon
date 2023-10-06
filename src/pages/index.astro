@@ -9,28 +9,24 @@ import { MultistepForm } from '../components/multistep-form/index.jsx';
 	<div class="background">
 		<Header></Header>
 		<Welcome></Welcome>
+		<MultistepForm client:load />
 	</div>
-	<MultistepForm client:load />
 </Layout>
 
 <style>
 .background{
-	/* Take height out when more content is within page */
-	height: 100%;
 	padding-block: 2rem;
 	
 	background: url(../../../public/img/bg-1.svg);
-	background-size: cover;
+	background-size: contain;
 	background-repeat: no-repeat;
-	background-position: 0 45%;
+	background-position: 0 0;
 }
 
 /* A partir de 800px */
 @media (min-width: 50em){
 	.background{
 		padding-block: 0;
-		
-		background-position: 0 35%;
 	}
 }
 </style>
