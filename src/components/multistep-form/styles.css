@@ -40,3 +40,7 @@ main {
     background-image: url("../../../public/img/bg-illustration2.svg");
   }
 }
+
+.hide {
+  display: none !important;
+}

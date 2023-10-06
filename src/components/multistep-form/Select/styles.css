@@ -1,0 +1,48 @@
+.select-container {
+  border: 0;
+  isolation: isolate;
+  margin-top: 1rem;
+}
+
+.select-container > .regular-text {
+  padding: 0.5em 0.75em;
+  border-radius: 0.25em 0.25em 0 0;
+  background-color: var(--black-600);
+  color: var(--white);
+}
+
+.select-container > div {
+  display: inline-block;
+  position: relative;
+  border: 2px solid currentColor;
+  color: var(--black-600);
+}
+
+.select-container > div::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  bottom: -4px;
+  right: -4px;
+  z-index: -1;
+
+  background-color: currentColor;
+}
+
+.select-container > select {
+  padding: 0.25em 0.75em;
+  // A reset of styles, including removing the default dropdown arrow
+  appearance: none;
+  // Additional resets for further consistency
+  background-color: transparent;
+}
+
+.select-container > select > option:hover:focus {
+  background-color: black;
+  color: white;
+}
+
+.select-container > select > option:checked {
+  background: var(--black-300);
+  color: var(--white);
+}

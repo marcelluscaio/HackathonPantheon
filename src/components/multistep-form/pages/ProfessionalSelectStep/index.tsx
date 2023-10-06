@@ -3,6 +3,7 @@ import { MultistepButtons } from "../../Buttons";
 import { StatusBar } from "../../StatusBar";
 import { TitleComponent } from "../../TitleComponent";
 import "./styles.css";
+import { SelectComponent } from "../../Select";
 
 export function ProfessionalSelectStep() {
   const pageProps = {
@@ -11,11 +12,21 @@ export function ProfessionalSelectStep() {
     title: "Agora escolha a especialidade do profissional.",
   };
 
+  const mock = [
+    "Cardiologista",
+    "Otorrinolaringologista",
+    "Pneumologista",
+    "Clínico Geral",
+    "Pneumologista",
+    "Cardiologista",
+  ];
+
   return (
     <>
       <StatusBar />
       <div className={`container-main ${pageProps.page}`}>
         <TitleComponent link={pageProps.link} title={pageProps.title} />
+        <SelectComponent title='Selecione' content={mock} />
         <div className='btn-sections'>
           <MultistepButtons icon={<ArrowRight size={26} />} title='Continuar' />
           <MultistepButtons
